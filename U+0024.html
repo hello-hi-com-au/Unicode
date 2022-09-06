@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>U+0020</p>
+<input type="text" value="$" id="a">
+<button onclick="b()">Copy text</button>
+<script>
+function b() {
+  var text = document.getElementById("a");
+  text.select();
+  text.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(text.value);
+}
+</script>
+</body>
+</html>
